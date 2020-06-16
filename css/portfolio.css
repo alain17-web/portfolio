@@ -1,0 +1,448 @@
+
+/*------------------Homepage----------*/
+
+#oasis img{
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+@media screen and (min-width:1921px){
+    #oasis img{
+        width:100vw;
+        height: auto;
+        padding-right:0;
+        padding-left:0;
+        margin-right:0;
+        margin-left:0;
+    }
+    #oasis2 img{
+        width:100vw;
+        height:auto;
+        padding-right:0;
+        padding-left:0;
+        margin-right:0;
+        margin-left:0;
+    }
+}
+
+
+#bienvenue{
+    font-family: 'Antic Didone', serif;
+    
+}
+
+#bienvenue p{
+    font-family: 'Antic Didone', serif;
+}
+
+/*------------------gallery-------------*/
+
+#galerie{
+    background-color:#eedbb6
+}
+
+#galerie h1{
+    font-family: 'Antic Didone', serif;
+}
+
+#galerie h3,p{
+    font-family: 'Special Elite', cursive;
+}
+
+/*-----------------tuto1----------------*/
+
+#tuto1 {
+    background-color:#eedbb6; 
+    height:100vh;
+    background-size:cover
+}
+
+#tuto1 h1,h2{
+    font-family: 'Titillium Web', sans-serif;
+}
+
+#tuto1 p{
+    font-family: 'Alef', sans-serif;
+}
+
+/*-----------------tuto2-----------------*/
+
+#tuto2{
+    background-color:#eedbb6;
+    height:100vh;
+    background-size:cover
+}
+
+#tuto2 h1{
+    font-family: 'Titillium Web', sans-serif;
+}
+
+#tuto2 p{
+    font-family: 'Alef', sans-serif;
+}
+
+/*------------------links---------------------*/
+
+#liens{
+    background-image:url('../img/screen29.jpg'); background-repeat: no-repeat;
+    height:100vh;
+    background-size: cover;
+    margin:0;
+    padding:0;
+}
+
+#liens_titre h1{
+    font-family: 'Antic Didone', serif; 
+}
+
+#postit ul{
+    overflow:hidden;
+    padding-top:3em;
+}
+
+#W3{
+    list-style:none;
+    margin:1em;
+    float:left; 
+}
+
+#W3 a{
+    text-decoration:none;
+    color:#000;
+    background:#ffc;
+    display:block;
+    height:12em;
+    width:12em;
+    padding:1em;
+    box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+    transform: rotate(-6deg);
+}
+
+#W3 h2{
+    font-size:140%;
+    font-weight:bold;
+    padding-bottom:10px;
+}
+
+#W3 p{
+    font-family:'Reenie Beanie',arial,sans-serif;
+    font-size:145%;
+}
+
+#grafikart{
+    list-style:none; margin:1em;
+    float:left;
+}
+
+#grafikart a{
+    text-decoration:none;
+    color:#000;
+    background:#ffc;
+    display:block;
+    height:12em;
+    width:12em;
+    padding:1em;
+    box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+    transform:rotate(4deg);
+    position:relative;
+    top:5px;
+    background:#cfc;
+}
+
+#grafikart h2{
+    font-size:140%;
+    font-weight:bold;
+    padding-bottom:10px;
+}
+
+#grafikart p{
+    font-family:'Reenie Beanie',arial,sans-serif;
+    font-size:145%;
+}
+
+#pgiraud{
+    list-style:none;
+    margin:1em;
+    float:left;
+}
+
+#pgiraud a{
+    text-decoration:none;
+    color:#000;
+    background:#ffc;
+    display:block;
+    height:12em;
+    width:12em;
+    padding:1em;
+    box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+    transform: rotate(-6deg);
+    transform:rotate(-3deg);
+    position:relative;
+    top:-5px;
+    background:#ccf;
+}
+
+#pgiraud h2{
+    font-size:140%;
+    font-weight:bold;
+    padding-bottom:10px;
+}
+
+#pgiraud p{
+    font-family:'Reenie Beanie',arial,sans-serif;
+    font-size:145%;
+}
+
+#tutowebdesign{
+    list-style:none; 
+    margin:1em;
+    float:left;
+}
+
+#tutowebdesign a{
+    text-decoration:none;
+    color:#000;
+    background:#ffc;
+    display:block;
+    height:12em;
+    width:12em;
+    padding:1em;
+    box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+    transform:rotate(4deg);
+    position:relative;
+    top:5px;
+    background:#cfc;
+}
+
+#tutowebdesign h2{
+    font-size:140%;
+    font-weight:bold;
+    padding-bottom:10px;
+}
+
+#tutowebdesign p{
+    font-family:'Reenie Beanie',arial,sans-serif;
+    font-size:145%;
+}
+
+#stack{
+    list-style:none; 
+    margin:1em;
+    float:left;
+}
+
+#stack a{
+    text-decoration:none;
+    color:#000;
+    background:#ffc;
+    display:block;
+    height:12em;
+    width:12em;
+    padding:1em;
+    box-shadow: 5px 5px 7px rgba(33,33,33,.7); transform:rotate(-5deg);
+    position:relative;
+    top:-10px;
+}
+
+#stack h2{
+    font-size:140%;
+    font-weight:bold;
+    padding-bottom:10px;
+}
+
+#stack p{
+    font-family:'Reenie Beanie',arial,sans-serif;
+    font-size:145%;
+}
+
+#john{
+    list-style:none; 
+    margin:1em;
+    float:left;
+}
+
+#john a{
+    text-decoration:none;
+    color:#000;
+    background:#ffc;
+    display:block;
+    height:12em;
+    width:12em;
+    padding:1em;
+    box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+    transform:rotate(4deg);
+    position:relative;
+    top:5px;
+    background:#cfc;
+}
+
+#john h2{
+    font-size:140%;
+    font-weight:bold;
+    padding-bottom:10px;
+}
+
+#john p{
+    font-family:'Reenie Beanie',arial,sans-serif;
+    font-size:145%;
+}
+
+#freecode{
+    list-style:none; 
+    margin:1em;
+    float:left;
+}
+
+#freecode a{
+    text-decoration:none;
+    color:#000;
+    background:#ffc;
+    display:block;
+    height:12em;
+    width:12em;
+    padding:1em;
+    box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+    transform: rotate(-6deg);
+    transform:rotate(-3deg);
+    position:relative;
+    top:-5px;
+    background:#ccf;
+}
+
+#freecode h2{
+    font-size:140%;
+    font-weight:bold;
+    padding-bottom:10px;
+}
+
+#freecode p{
+    font-family:'Reenie Beanie',arial,sans-serif;
+    font-size:145%;
+}
+
+#mike{
+    list-style:none; 
+    margin:1em;
+    float:left;
+}
+
+#mike a{
+    text-decoration:none;
+    color:#000;
+    background:#ffc;
+    display:block;
+    height:12em;
+    width:12em;
+    padding:1em;
+    box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+    transform: rotate(-6deg);
+    transform:rotate(4deg);
+    position:relative;
+    top:5px;
+    background:#cfc;
+}
+
+#mike h2{
+    font-size:140%;
+    font-weight:bold;
+    padding-bottom:10px;
+}
+
+#mike p{
+    font-family:'Reenie Beanie',arial,sans-serif;
+    font-size:145%;
+}
+
+#openclass{
+    list-style:none; 
+    margin:1em;
+    float:left;
+}
+
+#openclass a{
+    text-decoration:none;
+    color:#000;
+    background:#ffc; 
+    margin:1em;
+    float:left;
+    display:block;
+    height:12em;
+    width:12em;
+    padding:1em;
+    box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+    transform: rotate(-6deg);
+}
+
+#openclass h2{
+    font-size:140%;
+    font-weight:bold;
+    padding-bottom:10px;
+}
+
+#openclass p{
+    font-family:'Reenie Beanie',arial,sans-serif;
+    font-size:145%;
+}
+
+#google{
+    list-style:none; 
+    margin:1em;
+    float:left;
+}
+
+#google a{
+    text-decoration:none;
+    color:#000;
+    background:#ffc;
+    display:block;
+    height:12em;
+    width:12em;
+    padding:1em;
+    box-shadow: 5px 5px 7px rgba(33,33,33,.7); 
+    transform: rotate(-6deg);
+    transform:rotate(4deg);
+    position:relative;
+    top:5px;
+    background:#cfc;
+}
+
+#google h2{
+    font-size:140%;
+    font-weight:bold;
+    padding-bottom:10px;
+}
+
+#google p{
+    font-family:'Reenie Beanie',arial,sans-serif;
+    font-size:145%;
+}
+
+
+    
+
+/*-----------------Contact--------------------*/
+
+#contact{
+    background-image:url('../img/montagne1.jpg'); background-repeat: no-repeat; 
+    height:100vh; 
+    background-size: cover;
+    background-position: center;
+}
+
+#lemessage{
+    font-family: 'Teko', sans-serif;
+}
+
+
+/*----------------Header--------------------*/
+
+#deroulant a{
+    font-family: 'Teko', sans-serif;
+}
+
+
+/*----------------Footer--------------------*/
+
+#footer p{
+    font-family: 'Teko', sans-serif;
+}

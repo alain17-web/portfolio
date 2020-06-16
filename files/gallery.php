@@ -8,52 +8,51 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Antic+Didone&family=Major+Mono+Display&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
-    <link  href="http://fonts.googleapis.com/css?family=Reenie+Beanie:regular" rel="stylesheet" type="text/css"> 
+    <link rel="stylesheet" type="text/css" href="./css/portfolio.css">
     
     <title>Gallery</title>
 </head>
-<body style="background-color:#eedbb6">
+<body id="galerie">
 <?php require "content/header.php"; ?>
 <div class="container-fluid mt-5">
-    <h1 class="h1 text-info text-center pt-5 my-5" style="font-family: 'Major Mono Display', monospace;
-    font-family: 'Antic Didone', serif;">Ma galerie</h1>
+    <h1 class="h1 text-info text-center pt-5 my-5" >Ma galerie</h1>
 
   <div class="row justify-content-around p-5">
     <div class="card col-sm-12 col-md-5 px-0 border-0" >
       <img class="card-img-top" src="img/prefo8.png" alt="screenshot site travail de fin de préformation">
     <div class="card-body text-center">
-    <h3 class="card-title" style="font-family: 'Special Elite', cursive;">Travail de fin de pré-formation</h3>
-    <p class="card-text" style="font-family: 'Special Elite', cursive;">Site de fin de préformation réalisé en HTML5 et CSS3</p>
-    <p class="card-text" style="font-family: 'Special Elite', cursive;">Février 2020</p>
+    <h3 class="card-title">Travail de fin de pré-formation</h3>
+    <p class="card-text">Site de fin de préformation réalisé en HTML5 et CSS3</p>
+    <p class="card-text">Février 2020</p>
     <a href="http://alain.webdev-cf2m.be/travail_prefo/pageshtml%20&%20css/" target="_blank" class="btn btn-success ">VISITER LE SITE</a>
   </div>
   </div>
   <div class="card col-sm-12 col-md-5 px-0 border-0" >
       <img class="card-img-bottom" src="img/siteK9.png" alt="screenshot site drkatarinaroos.be">
   <div class="card-body text-center">
-    <h3 class="card-title" style="font-family: 'Special Elite', cursive;">Projet personnel - Site web pour médecin</h3>
-    <p class="card-text" style="font-family: 'Special Elite', cursive;">Premier site réalisé en PHP procédural, HTML5 et Bootstrap 4</p>
-    <p class="card-text" style="font-family: 'Special Elite', cursive;">Mai 2020</p>
+    <h3 class="card-title">Projet personnel - Site web pour médecin</h3>
+    <p class="card-text">Premier site réalisé en PHP procédural, HTML5 et Bootstrap 4</p>
+    <p class="card-text">Mai 2020</p>
     <a href="http://drkatarinaroos.be" target="_blank" class="btn btn-success">VISITER LE SITE</a>
   </div>
 </div>
 
 <div class="row justify-content-around p-5">
   <div class="card col-sm-12 col-md-5 px-0 border-0" >
-    <img class="card-img-top" src="img/chess1.jpeg" alt="photo d'échiquier">
+    <img class="card-img-top" src="img/chess1.jpg" alt="photo d'échiquier">
   <div class="card-body text-center">
-    <h3 class="card-title" style="font-family: 'Special Elite', cursive;">A venir - Jeu d'échec</h3>
-    <p class="card-text" style="font-family: 'Special Elite', cursive;">Jeu d'échec à réaliser en Javascript</p>
-    <p class="card-text" style="font-family: 'Special Elite', cursive;">??/????</p>
+    <h3 class="card-title">A venir - Jeu d'échec</h3>
+    <p class="card-text">Jeu d'échec à réaliser en Javascript</p>
+    <p class="card-text">??/????</p>
     <a href="" target="_blank" class="btn btn-warning ">EN PROJET</a>
   </div>
   </div>
   <div class="card col-sm-12 col-md-5 px-0 border-0" >
-    <img class="card-img-bottom" src="img/petra1.jpeg" alt="photo de Petra">
+    <img class="card-img-bottom" src="img/petra1.jpg" alt="photo de Petra">
   <div class="card-body text-center">
-    <h3 class="card-title" style="font-family: 'Special Elite', cursive;">A venir - Projet personnel - Petra</h3>
-    <p class="card-text" style="font-family: 'Special Elite', cursive;">A réaliser en HTML5 et CSS3</p>
-    <p class="card-text" style="font-family: 'Special Elite', cursive;">??/????</p>
+    <h3 class="card-title">A venir - Projet personnel - Petra</h3>
+    <p class="card-text">A réaliser en HTML5 et CSS3</p>
+    <p class="card-text">??/????</p>
     <a href="" target="_blank" class="btn btn-warning">EN PROJET</a>
   </div>
   </div>

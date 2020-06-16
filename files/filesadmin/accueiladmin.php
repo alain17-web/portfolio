@@ -2,7 +2,7 @@
 
 session_start();
 
-echo "Bienvenue " . $_SESSION['$monpseudo'];
+echo "Bienvenue " . $_SESSION['$userpseudo'];
 
 ?>
 

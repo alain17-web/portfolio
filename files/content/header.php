@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel= "stylesheet" href= "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity= "sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin= "anonymous" >
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link  href="http://fonts.googleapis.com/css?family=Reenie+Beanie:regular" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@600&display=swap" rel="stylesheet"> 
+    <!--<link  href="http://fonts.googleapis.com/css?family=Reenie+Beanie:regular" rel="stylesheet" type="text/css">-->
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./css/portfolio.css">
     
     <title>Header</title>
 </head>
@@ -24,9 +25,9 @@
                 </li>
                 <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle px-5 <?php if($page=='tuto1.php' || $page=='tuto2.php'){echo 'active';}?>" href="#" id="menuderoulant" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tutoriels</a>
-                    <div class="dropdown-menu bg-warning" aria-labelledby="menuderoulant">
-                        <a class="h4 dropdown-item text-white bg-success " style="font-family: 'Teko', sans-serif;"href="?p=tuto1">-Envoi d'un mail par formulaire HTML5</a>
-                        <a class="h4 dropdown-item text-white bg-success" style="font-family: 'Teko', sans-serif;"href="?p=tuto2">-Gestion d'un espace membre</a>
+                    <div class="dropdown-menu bg-warning" aria-labelledby="menuderoulant" id="deroulant">
+                        <a class="h4 dropdown-item text-white bg-success" href="?p=tuto1">-Envoi d'un mail par formulaire HTML5</a>
+                        <a class="h4 dropdown-item text-white bg-success" href="?p=tuto2">-Gestion d'un espace membre</a>
                     </div>
                 </li>
                 <li class="nav-item

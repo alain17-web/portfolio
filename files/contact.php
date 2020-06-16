@@ -69,12 +69,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel= "stylesheet" href= "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity= "sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin= "anonymous" >
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link  href="http://fonts.googleapis.com/css?family=Reenie+Beanie:regular" rel="stylesheet" type="text/css"> 
-    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@600&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Teko:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./css/portfolio.css">
     
     <title>Contact</title>
 </head>
-<body style="background-image:url('img/montagne1.jpg'); background-repeat: no-repeat; height:100vh; background-size: cover; background-position: center;">
+<body id="contact">
 <?php require "content/header.php"; ?>
     <div class="container-fluid my-auto pt-5" id="form" > 
         <div class="row mt-5 pt-5 pb-5 mb-5">
@@ -106,8 +106,8 @@
                     </div>
                     <div class="row text-center">
                         <div class="col-md-6 offset-3">
-                            <div class="form-group text-center">
-                                <label for="lemessage" class="h1" style="font-family: 'Teko', sans-serif;"><strong>LAISSEZ-MOI UN MESSAGE</strong></label>
+                            <div class="form-group text-center" id="lemessage">
+                                <label for="lemessage" class="h1"><strong>LAISSEZ-MOI UN MESSAGE</strong></label>
                                 <textarea id="lemessage" required name="lemessage" rows="5" class="form-control"></textarea>
                                 <p class="small">* Champs obligatoire</p>
                             </div><!--form group-->

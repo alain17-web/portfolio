@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel= "stylesheet" href= "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity= "sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin= "anonymous" >
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!--<link  href="http://fonts.googleapis.com/css?family=Reenie+Beanie:regular" rel="stylesheet" type="text/css">-->
+    <link rel="stylesheet" type="text/css" href="./css/portfolio.css">
     <title>footer</title>
 </head>
 <body>
-    <div class="container"></div>
+    <div class="container" id="footer">
         <div class="row fixed-bottom">
             <div class="col-lg-12 d-none d-md-block text-light bg-dark">
-                <p class="text-center"><a href="https://www.facebook.com/roos.alain"><img src="img/facebook.png" class="img img-fluid pr-3 pt-2" style="width:3em; height:3em"></a><a href="https://www.linkedin.com/in/alain-roos-4376a1162"><img src="img/linkedin.png" class="img img-fluid pr-3 pt-2" style="width:3em; height:3em"></a><a href="https://twitter.com/roosalain1"><img src="img/twitter.png" class="img img-fluid pr-3 pt-2" style="width:3em;height:3em"></a>Alain Roos - CF2m | <?=date("Y")?></p>
+                <p class="text-center"><a href="https://www.facebook.com/roos.alain"><img src="img/facebook.png" class="img img-fluid pr-3 pt-2" style="width:3em; height:3em"></a><a href="https://www.linkedin.com/in/alain-roos-4376a1162"><img src="img/linkedin.png" class="img img-fluid pr-3 pt-2" style="width:3em; height:3em"></a><a href="https://twitter.com/roosalain1"><img src="img/twitter.png" class="img img-fluid pr-3 pt-2" style="width:3em; height:3em"></a>Alain Roos - CF2m | <?=date("Y")?></p>
             </div>
         </div>
     </div>
