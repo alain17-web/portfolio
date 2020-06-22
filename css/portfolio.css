@@ -429,8 +429,12 @@
     background-position: center;
 }
 
-#lemessage{
+#lemessage strong{
     font-family: 'Teko', sans-serif;
+}
+
+#lemessage textarea{
+    font-family:'Antic Didone', serif;
 }
 
 

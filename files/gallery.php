@@ -19,7 +19,7 @@
 
   <div class="row justify-content-around p-5">
     <div class="card col-sm-12 col-md-5 px-0 border-0" >
-      <img class="card-img-top" src="img/prefo8.png" alt="screenshot site travail de fin de préformation">
+      <img class="card-img-top" src="img/prefo8.jpg" alt="screenshot site travail de fin de préformation">
     <div class="card-body text-center">
     <h3 class="card-title">Travail de fin de pré-formation</h3>
     <p class="card-text">Site de fin de préformation réalisé en HTML5 et CSS3</p>
@@ -28,7 +28,7 @@
   </div>
   </div>
   <div class="card col-sm-12 col-md-5 px-0 border-0" >
-      <img class="card-img-bottom" src="img/siteK9.png" alt="screenshot site drkatarinaroos.be">
+      <img class="card-img-bottom" src="img/siteK9.jpg" alt="screenshot site drkatarinaroos.be">
   <div class="card-body text-center">
     <h3 class="card-title">Projet personnel - Site web pour médecin</h3>
     <p class="card-text">Premier site réalisé en PHP procédural, HTML5 et Bootstrap 4</p>
