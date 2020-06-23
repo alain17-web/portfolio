@@ -33,7 +33,7 @@ if(isset($_POST['submit'])){
                 if(password_verify($monmdp,$mdp_hash) && ($userpseudo == $monpseudo)){
 
                     $_SESSION['pseudo'] = $userpseudo;
-                    header("Location:./?Accueil admin");
+                    header("Location:?p=Accueil admin");
                     exit();
                 }
                 else{
