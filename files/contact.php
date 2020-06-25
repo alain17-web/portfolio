@@ -27,7 +27,7 @@
                            
             $envoi = @mail($monmail, $titre, $messageFinal, $entetes);
            
-                
+            
             
             if($envoi){
                 $alert = "<div class='container-fluid mt-5 pt-5>
@@ -38,7 +38,7 @@
                                     </div>
                                 </div>
                             </div>";
-                
+                 
                 
                 
 
@@ -46,6 +46,14 @@
             }else{
                 $alert = "problème serveur. Veuillez recommencer plus tard";
             }
+
+            $db = mysqli_connect("localhost","root","root","portfolio");
+            mysqli_set_charset($db,"utf8");//connection à la bd portfolio
+
+            $sql = "INSERT INTO contact (nom,email,note)VALUES('$lenom','$lemail','$lemessage')";
+            $insertion = mysqli_query($db,$sql) or die("Erreur: ".mysqli_erno($db));
+            
+                
 
         } else {
                 $alert = "<div class='container-fluid mt-5 pt-5'>
@@ -108,7 +116,7 @@
                     <div class="row text-center">
                         <div class="col-md-6 offset-3">
                             <div class="form-group text-center" id="lemessage">
-                                <label for="lemessage" class="h1"><strong>LAISSEZ-MOI UN MESSAGE</strong></label>
+                                <label for="lemessage" class="h1"><strong>LAISSEZ-MOI UN MESSAGE*</strong></label>
                                 <textarea id="lemessage" required name="lemessage" rows="5" class="form-control"></textarea>
                                 <p class="small">* Champs obligatoire</p>
                             </div><!--form group-->
@@ -123,13 +131,8 @@
                 </form>
 
 <?php 
-    $db = mysqli_connect("localhost","root","root","portfolio");
-    mysqli_set_charset($db,"utf8");//connection à la bd portfolio
-
-    $sql = "INSERT INTO contact (nom,email,message)VALUES('$lenom','$lemail','$lemessage')";
-    $insertion = mysqli_query($db,$sql);
-
-
+    
+exit();
   ?>  
     </div><!--container-->
     <div id="footer"><?php require "content/footer.php"; ?></div>
