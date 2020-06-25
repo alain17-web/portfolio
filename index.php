@@ -53,18 +53,13 @@ if(!isset($_GET["p"])){
         case "Supprimer un lien":
             require "files/filesadmin/crudliens.php";
             break;
-        case "Ajouter un contact":
+        case "Liste contacts":
             require "files/filesadmin/crudcontact.php";
             break;
-        case "Afficher un contact":
-            require "files/filesadmin/crudcontact.php";
+        case "Comptes":
+            require "files/filesadmin/crudcomptes.php";
             break;
-        case "Modifier un contact":
-            require "files/filesadmin/crudcontact.php";
-            break;
-        case "Supprimer un contact":
-            require "files/filesadmin/crudcontact.php";
-        default:
+       default:
             require "files/homepage.php";
 
     }
