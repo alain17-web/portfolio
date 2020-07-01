@@ -63,8 +63,8 @@ if(isset($_POST['submit'])){
 <?php require "content/header.php";?>
 <div class="mt-5 pt-5">
 <br><br>
+<a href="?p=Accueil admin">Vers Acueil admin</a>
 
-<a href="?p=Accueil admin">vers accueil admin</a>
 </div>
 <div class="container mt-5 pt-5">
     <h1 class="text-center text-info">Un pseudo et un mot de passe sont requis pour se connecter à l'ADMIN.</h1>  

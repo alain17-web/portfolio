@@ -59,6 +59,9 @@ if(!isset($_GET["p"])){
         case "Comptes":
             require "files/filesadmin/crudcomptes.php";
             break;
+        case "Supprimer compte":
+            require "files/filesadmin/supprimer_comptes.php";
+            break;
        default:
             require "files/homepage.php";
 
