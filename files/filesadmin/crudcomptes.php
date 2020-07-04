@@ -55,7 +55,7 @@
 
     <header class="row mt-5">
         <p class="lead col-md-8 ">Cette page permet de gérer la liste des personnes autorisées à accéder à la partie admin du site</p>
-        <p class="offset-1 col-md-3"><a href="ajouter_compte.php" class="btn btn-primary"><i class="fa fa-plus" aria-hidden="true"></i>&nbsp;&nbsp;Ajouter un nouveau compte</a></p>
+        <p class="offset-1 col-md-3"><a href="?p=Ajouter compte" class="btn btn-primary"><i class="fa fa-plus" aria-hidden="true"></i>&nbsp;&nbsp;Ajouter un nouveau compte</a></p>
     </header>
     
    
@@ -94,14 +94,15 @@
                             <td><?=$item['email']?></td>
                             <td><?=$item['mdp']?></td>
                             <td><?=$item['dateInscription']?></td>
-                            <td><a href="supprimer_comptes.php" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#supprimerCompte"><i class="fa fa-trash" aria-hidden="true"></i>Supprimer</a></td>
+                            <!--<td><a href="supprimer_comptes.php" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#supprimerCompte"><i class="fa fa-trash" aria-hidden="true"></i>Supprimer</a></td>--> 
+                            <td><a href="?p=Supprimer compte" class="btn btn-sm btn-danger"><i class="fa fa-trash" aria-hidden="true"></i>Supprimer</a></td>
                         </tr>
                     </tbody>
                 <?php 
                     }
                 ?>
                 </table>
-                <div class="modal fade" id="supprimerCompte" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <!--<div class="modal fade" id="supprimerCompte" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -120,7 +121,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>-->
             </div>
         </div>
     </div>

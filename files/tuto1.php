@@ -8,11 +8,13 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Alef&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./css/portfolio.css">
     <title>Envoi d'un mail par formulaire de contact HTML 5</title>
 </head>
 <body id="tuto1">
-<?php require "content/header.php"; ?></div>
+<?php require "content/header.php";?>
+    
 <div class="container-fluid mt-5 pt-5">
     <div class="row">
         <div class="col-6 offset-3 mt-5 mb-5">
