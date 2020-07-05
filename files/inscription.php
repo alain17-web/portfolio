@@ -3,6 +3,7 @@
 
 if(isset($_POST['submit'])){
 
+    $nom = htmlspecialchars(strip_tags(trim($_POST['nom'])),ENT_QUOTES);
     $pseudo = htmlspecialchars(strip_tags(trim($_POST['pseudo'])),ENT_QUOTES);
     $email = filter_var(trim($_POST['email']), FILTER_VALIDATE_EMAIL);
     $mdp = htmlspecialchars(strip_tags(trim($_POST['mdp'])),ENT_QUOTES);
@@ -23,7 +24,7 @@ if(isset($_POST['submit'])){
 
             if(empty(mysqli_num_rows($checkPseudo))){
 
-            $sql = "INSERT INTO inscription (pseudo,email,mdp)VALUES('$pseudo','$email','$mdp_hash')";
+            $sql = "INSERT INTO inscription (nom,pseudo,email,mdp)VALUES('$nom','$pseudo','$email','$mdp_hash')";
             $inscription = mysqli_query($db,$sql);
 
                 if($inscription){
@@ -71,21 +72,25 @@ if(isset($_POST['submit'])){
 <div class="container mt-5">
     
         <form action="" method="POST">
+            <div class="form-group"> 
+                <label for="nom"><strong>Votre nom :</strong></label>
+                <input type="text" name="nom" id="nom" class="form-control" required/>
+            </div>
             <div class="form-group">
                 <label for="pseudo"><strong>Choisissez un pseudo :</strong></label>
-                <input type="text" name="pseudo" id="pseudo" class="form-control"/>
+                <input type="text" name="pseudo" id="pseudo" class="form-control" required/>
             </div>
             <div class="form-group">
                 <label for="email"><strong>Votre email :</strong></label>
-                <input type="email" name="email" id="email" class="form-control"/>
+                <input type="email" name="email" id="email" class="form-control" required/>
             </div>
             <div class="form-group">
                 <label for="mdp"><strong>Choisissez un mot de passe :</strong></label>
-                <input type="password" name="mdp" id="mdp" class="form-control"/>
+                <input type="password" name="mdp" id="mdp" class="form-control" required/>
             </div>
             <div class="form-group">
                 <label for="mdp2"><strong>Confirmez votre mot de passe :</strong></label>
-                <input type="password" name="mdp2" id="mdp2" class="form-control"/>
+                <input type="password" name="mdp2" id="mdp2" class="form-control" required/>
             </div>
             <div class="text-center pt-3">
                 <button type="submit" name="submit" class="btn btn-primary">S'inscrire</button>
@@ -95,7 +100,7 @@ if(isset($_POST['submit'])){
 if(isset($alerte)) echo $alerte;
 ?>
 </div>
-<div id="footer"><?php require "content/footer.php"; ?></div>
+<div id="footer" class="mt-5 pt-5"><?php require "content/footer.php"; ?></div>
 
 
 

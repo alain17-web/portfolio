@@ -1,13 +1,15 @@
-<?php $page='admin.php';
+<?php 
 
 
 session_start();
+
+$page='admin.php';
 
 if(isset($_POST['submit'])){
 
     $monpseudo = htmlspecialchars(strip_tags(trim($_POST['monpseudo'])),ENT_QUOTES);
     $monmdp = htmlspecialchars(strip_tags(trim($_POST['monmdp'])),ENT_QUOTES);
-    
+     
 
     if($monpseudo && $monmdp){
 
@@ -29,10 +31,11 @@ if(isset($_POST['submit'])){
                 $row = mysqli_fetch_assoc($result);
                 $mdp_hash = $row['mdp'];
                 $userpseudo = $row['pseudo'];
+                $username = $row['nom'];
 
                 if(password_verify($monmdp,$mdp_hash) && ($userpseudo == $monpseudo)){
 
-                    $_SESSION['pseudo'] = $userpseudo;
+                    $_SESSION['nom'] = $username;
                     header("Location:?p=Accueil admin");
                     exit();
                 }
@@ -63,8 +66,8 @@ if(isset($_POST['submit'])){
 <?php require "content/header.php";?>
 <div class="mt-5 pt-5">
 <br><br>
-<a href="?p=Accueil admin">Vers Acueil admin</a>
 
+<a href="?p=Accueil admin">vers accueil admin</a>
 </div>
 <div class="container mt-5 pt-5">
     <h1 class="text-center text-info">Un pseudo et un mot de passe sont requis pour se connecter à l'ADMIN.</h1>  
@@ -89,7 +92,7 @@ if(isset($_POST['submit'])){
 if(isset($alerte)) echo $alerte;
 ?>
 </div>
-<div id="footer"><?php require "content/footer.php"; ?></div>
+<div id="footer" class="mt-5 pt-5"><?php require "content/footer.php"; ?></div>
 
 
 

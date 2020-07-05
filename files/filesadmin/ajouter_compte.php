@@ -1,6 +1,7 @@
 <?php
 
 
+
 if(isset($_POST['submit'])){
 
     $pseudo = htmlspecialchars(strip_tags(trim($_POST['pseudo'])),ENT_QUOTES);
@@ -69,35 +70,35 @@ if(isset($_POST['submit'])){
         <div class="collapse navbar-collapse" id="menuderoulant">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class=" h4 nav-link px-5 text-info" href="?p=Accueil admin">Accueil admin</a>
+                    <a class=" h4 nav-link px-5 text-info" href="?admin=Accueil admin">Accueil admin</a>
                 </li>
                 <li class="nav-item dropdown">
                 <a class=" h4 nav-link dropdown-toggle px-5 text-info" href="#" id="galeriederoulant" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Galerie</a>
                     <div class="dropdown-menu bg-warning" aria-labelledby="galeriederoulant">
-                        <a class="h4 dropdown-item text-info" href="?p=Ajouter une image">Ajouter une image</a>
-                        <a class="h4 dropdown-item text-info" href="?p=Afficher une image">Afficher une image</a>
-                        <a class="h4 dropdown-item text-info" href="?p=Modifier une image">Modifier une image</a>
-                        <a class="h4 dropdown-item text-info" href="?p=Supprimer une image">Supprimer une image</a>
+                        <a class="h4 dropdown-item text-info" href="?admin=Ajouter une image">Ajouter une image</a>
+                        <a class="h4 dropdown-item text-info" href="?admin=Afficher une image">Afficher une image</a>
+                        <a class="h4 dropdown-item text-info" href="?admin=Modifier une image">Modifier une image</a>
+                        <a class="h4 dropdown-item text-info" href="?admin=Supprimer une image">Supprimer une image</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
                 <a class=" h4 nav-link dropdown-toggle px-5 text-info" href="#" id="lienderoulant" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Liens</a>
                     <div class="dropdown-menu bg-warning" aria-labelledby="lienderoulant">
-                        <a class="h4 dropdown-item text-info" href="?p=Ajouter un lien">Ajouter un lien</a>
-                        <a class="h4 dropdown-item text-info" href="?p=Afficher un lien">Afficher un lien</a>
-                        <a class="h4 dropdown-item text-info" href="?p=Modifier un lien">Modifier un lien</a>
-                        <a class="h4 dropdown-item text-info" href="?=Supprimer un lien">Supprimer un lien</a>
+                        <a class="h4 dropdown-item text-info" href="?admin=Ajouter un lien">Ajouter un lien</a>
+                        <a class="h4 dropdown-item text-info" href="?admin=Afficher un lien">Afficher un lien</a>
+                        <a class="h4 dropdown-item text-info" href="?admin=Modifier un lien">Modifier un lien</a>
+                        <a class="h4 dropdown-item text-info" href="?admin=Supprimer un lien">Supprimer un lien</a>
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="h4 nav-link px-5 text-info" href="?p=Liste contacts">Liste Contacts</a>
+                    <a class="h4 nav-link px-5 text-info" href="?admin=Liste contacts">Liste Contacts</a>
                 </li>
                 <li class="nav-item">
-                    <a class="h4 nav-link px-5 text-success" href="?p=Comptes">Comptes</a>
+                    <a class="h4 nav-link px-5 text-success" href="?admin=Comptes">Comptes</a>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
-                <button class="btn btn-outline-info my-2 my-sm-0"><a class=" h4 text-info" href="?p=Admin">Se déconnecter</a></button>
+                <button class="btn btn-outline-info my-2 my-sm-0"><a class=" h4 text-info" href="?admin=Déconnexion">Se déconnecter</a></button>
             </form>
              
         </div>

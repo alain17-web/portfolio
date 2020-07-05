@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -54,15 +57,19 @@
         <div class="container mt-5 pt-5"> 
             <div class="row text-center">
                 <div class="col h1 bg-success">
-                    
-                    <h1 class="h1 p-3">"Bienvenue sur l'admin de ce site."</h2>
+                    <p class="h3">Bonjour <?=$_SESSION['nom']?>!</p>
+                    <h1 class="h1">"Bienvenue sur l'Admin de ce site"</h2>
                     <br/>
                 </div>
             </div>
         <div class="row text-center pt-5">
             <div class="col">
     <button class="btn btn-primary"><a class="h3 text-white" href="?p=Admin">Retour au formulaire admin</a></button><br><br><br>
-    
+    <a class="h4" href="?p=retour">Retour au site</a><br>
+    <a class="h4" href="?p=Ajouter une image">Vers CRUD Galerie</a><br>
+    <a class="h4" href="?p=Ajouter un lien">Vers CRUD Liens</a><br>
+    <a class="h4" href="?p=Liste contacts">Vers Contact</a><br>
+    <a class="h4" href="?p=Comptes">Vers CRUD Comptes</a><br>
 
 
             </div>

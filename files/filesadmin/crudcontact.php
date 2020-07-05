@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+p<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -32,7 +32,7 @@
                         <a class="h4 dropdown-item text-info" href="?p=Ajouter un lien">Ajouter un lien</a>
                         <a class="h4 dropdown-item text-info" href="?p=Afficher un lien">Afficher un lien</a>
                         <a class="h4 dropdown-item text-info" href="?p=Modifier un lien">Modifier un lien</a>
-                        <a class="h4 dropdown-item text-info" href="?=Supprimer un lien">Supprimer un lien</a>
+                        <a class="h4 dropdown-item text-info" href="?p=Supprimer un lien">Supprimer un lien</a>
                     </div>
                 </li>
                 <li class="nav-item">
