@@ -41,23 +41,32 @@ if(!isset($_GET["p"])){
         case "Supprimer une image":
             require "files/filesadmin/crudgalerie.php";
             break;
-        case "Ajouter un lien":
-            require "files/filesadmin/crudliens.php";
-            break; 
-        case "Afficher un lien":
+        case "Liste liens":
             require "files/filesadmin/crudliens.php";
             break;
+        case "Ajouter un lien":
+            require "files/filesadmin/ajouter_lien.php";
+            break; 
         case "Modifier un lien":
-            require "files/filesadmin/crudliens.php";
+            require "files/filesadmin/modifier_lien.php";
             break;
         case "Supprimer un lien":
-            require "files/filesadmin/crudliens.php";
+            require "files/filesadmin/supprimer_lien.php";
             break;
         case "Liste contacts":
             require "files/filesadmin/crudcontact.php";
             break;
         case "Comptes":
             require "files/filesadmin/crudcomptes.php";
+            break;
+        case "Ajouter un compte":
+            require "files/filesadmin/ajouter_compte.php";
+            break;
+        case "Modifier un compte":
+            require "files/filesadmin/modifier_compte.php";
+            break;
+        case "Supprimer un compte":
+            require "files/filesadmin/supprimer_compte.php";
             break;
        default:
             require "files/homepage.php";

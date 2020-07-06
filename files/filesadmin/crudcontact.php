@@ -1,4 +1,4 @@
-p<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -8,8 +8,8 @@ p<!DOCTYPE html>
     <title>Liste contacts</title>
 </head>
 <body>
-<?php //require 'contentadmin/headeradmin.php';?>
-<nav class="navbar navbar-expand-lg navbar-dark bg-warning">
+<?php require 'contentadmin/headeradmin.php';?>
+<!--<nav class="navbar navbar-expand-lg navbar-dark bg-warning">
         <a class="navbar-brand text-info" href="">Portfolio - Gestion du site</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuderoulant" aria-controls="menuderoulant" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="menuderoulant">
@@ -47,11 +47,11 @@ p<!DOCTYPE html>
             </form>
              
         </div>
-     </nav>
+     </nav>-->
 
     <div class="mt-5 pt-5 text-center">
-    <h1>Liste de contacts</h1>
-    <a href="?p=Accueil admin">Vers Accueil admin</a>
+    <h1>Liste des contacts</h1>
+    
     </div>
     
     <div class="container mt-5 pt-5 text-center">
@@ -84,7 +84,7 @@ p<!DOCTYPE html>
 
                 ?>
                     <tbody>
-                        <tr>
+                        <tr class="text-center">
                             <td><?=$item['nom']?></td>
                             <td><?=$item['email']?></td>
                             <td><?=$item['note']?></td>

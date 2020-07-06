@@ -11,8 +11,8 @@ session_start();
     <title>accueil admin</title>
 </head>
 <body>
-    <?php //require 'contentadmin/headeradmin.php';?>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-warning">
+    <?php require 'contentadmin/headeradmin.php';?>
+    <!--<nav class="navbar navbar-expand-lg navbar-dark bg-warning">
         <a class="navbar-brand text-info" href="">Portfolio - Gestion du site</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuderoulant" aria-controls="menuderoulant" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="menuderoulant">
@@ -50,7 +50,7 @@ session_start();
             </form>
              
         </div>
-     </nav>
+     </nav>--> 
 
         <div class="mt-5 pt-5">
         <h1 class="text-center">Accueil admin</h1>

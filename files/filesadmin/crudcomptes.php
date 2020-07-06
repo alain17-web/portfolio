@@ -9,8 +9,8 @@
     <title>Gérer comptes</title>
 </head>
 <body>
-<?php //require 'contentadmin/headeradmin.php';?>
-<nav class="navbar navbar-expand-lg navbar-dark bg-warning">
+<?php require 'contentadmin/headeradmin.php';?>
+<!--<nav class="navbar navbar-expand-lg navbar-dark bg-warning">
         <a class="navbar-brand text-info" href="">Portfolio - Gestion du site</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuderoulant" aria-controls="menuderoulant" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="menuderoulant">
@@ -48,10 +48,10 @@
             </form>
              
         </div>
-     </nav>
+     </nav>-->
      <div class="container mt-5 pt-5">
 
-    <h1 class="text-center">Gestion des inscriptions</h1>
+    <h1 class="text-center">Administration des inscriptions</h1>
 
     <header class="row mt-5">
         <p class="lead col-md-8 ">Cette page permet de gérer la liste des personnes autorisées à accéder à la partie admin du site</p>
@@ -64,11 +64,13 @@
                 <table class="table table-striped bg-light">
                     <thead >
                     <tr>
+                        <th scope="col">Nom</th>
                         <th scope="col">Pseudo</th>
                         <th scope="col">Email</th>
                         <th scope="col">Mot de passe</th>
                         <th scope="col">Date</th>
-                        <th scope="col"></th>
+                        
+                        
                     </tr>
                     </thead>
                 <?php
@@ -86,23 +88,26 @@
                 }
                 else{
                     while ($item = mysqli_fetch_assoc($reponse)){
+                    
                         
                 ?>
                     <tbody>
                         <tr>
+                            <td><?=$item['nom']?></td>
                             <td><?=$item['pseudo']?></td>
                             <td><?=$item['email']?></td>
                             <td><?=$item['mdp']?></td>
                             <td><?=$item['dateInscription']?></td>
-                            <!--<td><a href="supprimer_comptes.php" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#supprimerCompte"><i class="fa fa-trash" aria-hidden="true"></i>Supprimer</a></td>--> 
-                            <td><a href="?p=Supprimer compte" class="btn btn-sm btn-danger"><i class="fa fa-trash" aria-hidden="true"></i>Supprimer</a></td>
+                            <td><a href="?p=Modifer un compte" class="btn btn-sm btn-warning"><i class="fa fa-edit" aria-hidden="true"></i>Modifier</a></td>
+                            <td><a href="?p=Supprimer un compte" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#supprimerCompte"><i class="fa fa-trash" aria-hidden="true"></i>Supprimer</a></td> 
+                            
                         </tr>
                     </tbody>
                 <?php 
                     }
                 ?>
                 </table>
-                <!--<div class="modal fade" id="supprimerCompte" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal fade" id="supprimerCompte" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -121,7 +126,7 @@
                             </div>
                         </div>
                     </div>
-                </div>-->
+                </div>
             </div>
         </div>
     </div>

@@ -64,7 +64,8 @@ if(isset($_POST['submit'])){
     <title>ajouter un compte</title>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-warning">
+<?php require 'contentadmin/headeradmin.php';?>
+<!--<nav class="navbar navbar-expand-lg navbar-dark bg-warning">
         <a class="navbar-brand text-info" href="">Portfolio - Gestion du site</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuderoulant" aria-controls="menuderoulant" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="menuderoulant">
@@ -102,7 +103,7 @@ if(isset($_POST['submit'])){
             </form>
              
         </div>
-     </nav>
+     </nav>-->
      <main class="container">
      <h1 class="text-center mt-5">Admin - Ajouter un compte</h1>
      
