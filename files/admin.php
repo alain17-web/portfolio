@@ -1,7 +1,7 @@
 <?php 
 
 
-session_start();
+//session_start();
 
 $page='admin.php';
 

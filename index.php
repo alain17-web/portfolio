@@ -1,7 +1,18 @@
 <?php
-if(!isset($_GET["p"])){
-    require "files/homepage.php";
-}else{
+
+session_start();
+
+//require_once "config.php";
+
+//$db=mysqli_connect(DB_HOST,DB_LOGIN,DB_PWD,DB_NAME);
+//mysqli_set_charset($db,"utf8");
+
+//if(isset($_SESSION['masession'])&&$_SESSION['masession']===session_id()){
+
+    if(!isset($_GET["p"])){
+        require "files/homepage.php";
+    }
+    else{
     $p=$_GET["p"];
 
     switch($p){
@@ -71,5 +82,5 @@ if(!isset($_GET["p"])){
        default:
             require "files/homepage.php";
 
+        }
     }
-}

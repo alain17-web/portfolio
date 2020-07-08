@@ -1,3 +1,8 @@
+<?php 
+    //session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -15,6 +20,7 @@
     <h1 class="text-center">Administration des liens</h1>
 
         <header class="row mt-5">
+            <p class="h3">Bonjour <?=$_SESSION['nom']?></p>
             <p class="lead col-md-8">Cette page sert à gérer les liens utiles que j'ai répertorié dans l'apprentissage du code.</p>
             <p class="offset-1 col-md-3"><a href="?p=Ajouter un lien" class="btn btn-primary"><i class="fa fa-plus" aria-hidden="true"></i>&nbsp;&nbsp;Ajouter un nouveau lien</a></p>
         </header>

@@ -1,5 +1,7 @@
 <?php 
 
+//session_start();
+
 if(isset($_POST['nomSite'],$_POST['theurl'],$_POST['description'],$_POST['categorie'])){
 
     $nomSite = htmlspecialchars(strip_tags(trim($_POST['nomSite'])),ENT_QUOTES);

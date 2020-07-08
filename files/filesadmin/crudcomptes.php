@@ -1,3 +1,7 @@
+<?php 
+    //session_start();
+
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -16,6 +20,7 @@
     <h1 class="text-center">Administration des inscriptions</h1>
 
     <header class="row mt-5">
+        <p class="h3">Bonjour <?=$_SESSION['nom']?></p>
         <p class="lead col-md-8 ">Cette page permet de gérer la liste des personnes autorisées à accéder à la partie admin du site</p>
         <p class="offset-1 col-md-3"><a href="?p=Ajouter compte" class="btn btn-primary"><i class="fa fa-plus" aria-hidden="true"></i>&nbsp;&nbsp;Ajouter un nouveau compte</a></p>
     </header>
