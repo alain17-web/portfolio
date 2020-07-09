@@ -79,6 +79,12 @@ session_start();
         case "Supprimer un compte":
             require "files/filesadmin/supprimer_compte.php";
             break;
+        case "Déconnexion":
+            require "files/filesadmin/disconnect.php";
+            break;
+        case "Erreur 404":
+            require "files/filesadmin/error404.php";
+            break;
        default:
             require "files/homepage.php";
 

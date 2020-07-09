@@ -29,12 +29,14 @@ if(isset($_POST['submit'])){
         if(mysqli_num_rows($result) === 1 ){
 
                 $row = mysqli_fetch_assoc($result);
+                //$_SESSION['masession'] = session_id();
                 $mdp_hash = $row['mdp'];
                 $userpseudo = $row['pseudo'];
                 $username = $row['nom'];
 
                 if(password_verify($monmdp,$mdp_hash) && ($userpseudo == $monpseudo)){
 
+                    
                     $_SESSION['nom'] = $username;
                     header("Location:?p=Accueil admin");
                     exit();

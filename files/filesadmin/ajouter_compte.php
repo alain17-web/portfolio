@@ -5,6 +5,7 @@
 
 if(isset($_POST['submit'])){
 
+    $nom = htmlspecialchars(strip_tags(trim($_POST['nom'])),ENT_QUOTES);
     $pseudo = htmlspecialchars(strip_tags(trim($_POST['pseudo'])),ENT_QUOTES);
     $email = filter_var(trim($_POST['email']), FILTER_VALIDATE_EMAIL);
     $mdp = htmlspecialchars(strip_tags(trim($_POST['mdp'])),ENT_QUOTES);
@@ -25,7 +26,7 @@ if(isset($_POST['submit'])){
 
             if(empty(mysqli_num_rows($checkPseudo))){
 
-            $sql = "INSERT INTO inscription (pseudo,email,mdp)VALUES('$pseudo','$email','$mdp_hash')";
+            $sql = "INSERT INTO inscription (nom,pseudo,email,mdp)VALUES('$nom','$pseudo','$email','$mdp_hash')";
             $inscription = mysqli_query($db,$sql);
 
                 if($inscription){
@@ -74,6 +75,10 @@ if(isset($_POST['submit'])){
 
      <form action="" method="POST">
             <div class="form-group">
+                <label for="nom"><strong>Ajouter un nom :</strong></label>
+                <input type="text" name="nom" id="nom" class="form-control" required/>
+            </div>
+            <div class="form-group">
                 <label for="pseudo"><strong>Ajouter un pseudo :</strong></label>
                 <input type="text" name="pseudo" id="pseudo" class="form-control" required/>
             </div>
@@ -97,12 +102,7 @@ if(isset($_POST['submit'])){
 <?php 
 if(isset($alerte)) echo $alerte;
 ?>
-     
-     
-     </main>
-
-
-
+</main>
     <script src= "https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity= "sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin= "anonymous" ></script>    
     <script src= "https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity= "sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin= "anonymous" ></script>
     <script src= "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity= "sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin= "anonymous" ></script>
