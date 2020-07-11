@@ -29,8 +29,8 @@
                     </thead>
                 <?php
 
-                $db = mysqli_connect("localhost","root","root","portfolio");
-                mysqli_set_charset($db,"utf8");
+                /*$db = mysqli_connect("localhost","root","root","portfolio");
+                mysqli_set_charset($db,"utf8");*/
 
                 $sql = "SELECT * FROM contact";
 

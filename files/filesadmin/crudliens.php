@@ -39,8 +39,8 @@
                     </thead>
                 <?php
 
-                $db = mysqli_connect("localhost","root","root","portfolio");
-                mysqli_set_charset($db,"utf8");
+                /*$db = mysqli_connect("localhost","root","root","portfolio");
+                mysqli_set_charset($db,"utf8");*/
                 $sql = "SELECT * FROM Links";
 
                 $reponse = mysqli_query($db,$sql) or die("Erreur: ".mysqli_errno($db));
@@ -60,34 +60,15 @@
                             <td><a href="<?=$item['theurl']?>" name="<?=$item['theurl']?>" target="_blank"><?=$item['theurl']?></td>
                             <td><?=$item['description']?></td>
                             <td><?=$item['categorie']?></td>
-                            <td><a href="?p=Modifer un lien" class="btn btn-sm btn-warning"><i class="fa fa-edit" aria-hidden="true"></i>Modifier</a></td>
-                            <td><a href="?p=Supprimer un lien" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#supprimerCompte"><i class="fa fa-trash" aria-hidden="true"></i>Supprimer</a></td> 
+                            <td><a href="?p=Modifer un lien&id=<?= $item['idLiens']?>" class="btn btn-sm btn-warning"><i class="fa fa-edit" aria-hidden="true"></i>Modifier</a></td>
+                            <td><a href="?p=Supprimer un lien&id=<?= $item['idLiens']?>" class="btn btn-sm btn-danger"><i class="fa fa-trash" aria-hidden="true"></i>Supprimer</a></td> 
                         </tr>
                     </tbody>
                 <?php 
                     }
                 ?>
                 </table>
-                <div class="modal fade" id="supprimerCompte" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="supprimer">Supprimer ?</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <p>Etes-vous certain de vouloir supprimer ce compte ?</p>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-danger mr-auto" data-dismiss="modal">Annuler</button>
-                                <button type="button" class="btn btn-primary" data-dismiss="modal">Confirmer</button>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
             </div>
         </div>
     </div>

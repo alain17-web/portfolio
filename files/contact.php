@@ -47,9 +47,8 @@
                 $alert = "problème serveur. Veuillez recommencer plus tard";
             }
 
-            $db = mysqli_connect("localhost","root","root","portfolio");
-            mysqli_set_charset($db,"utf8");//connection à la bd portfolio
-
+            /*$db = mysqli_connect("localhost","root","root","portfolio");
+            mysqli_set_charset($db,"utf8");*/
             $sql = "INSERT INTO contact (nom,email,note)VALUES('$lenom','$lemail','$lemessage')";
             $insertion = mysqli_query($db,$sql) or die("Erreur: ".mysqli_erno($db));
             

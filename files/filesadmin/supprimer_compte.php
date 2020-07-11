@@ -6,18 +6,21 @@ if(isset($_GET['id'])&&ctype_digit($_GET['id'])){
     
     if(isset($_GET['ok'])){
 
-    $db = mysqli_connect("localhost","root","root","portfolio");
-    mysqli_set_charset($db,"utf8");
+    /*$db = mysqli_connect("localhost","root","root","portfolio");
+    mysqli_set_charset($db,"utf8");*/
         
     $sql = "DELETE FROM  inscription WHERE id = $id";
     mysqli_query($db,$sql) or die("Erreur: ".mysqli_errno($db));
     
-    $alerte = "<h2 class='text-center text-success'>Le compte a bien été supprimé.</h2>";
+    $confirm = "<div class='alert alert-success text-center mt-5'>
+            <h2 class='text-center text-success'>Le compte a bien été supprimé.</h2>
+            <button class='btn btn-success'><a href='?p=Comptes' class='text-white'> Retour à la liste des comptes</a></button>
+            </div>";
 
     }
 
     /*$db = mysqli_connect("localhost","root","root","portfolio");
-    mysqli_set_charset($db,"utf8");
+    mysqli_set_charset($db,"utf8");*/
 
     $sql = "SELECT pseudo FROM inscription WHERE id = $id";
     $result = mysqli_query($db,$sql) or die("Erreur: ".mysqli_errno($db));
@@ -27,12 +30,12 @@ if(isset($_GET['id'])&&ctype_digit($_GET['id'])){
     }
     else{
         $alerte = "<h2 class='text-center text-info'>Ce compte n'existe pas</h2>";
-    }*/
+    }
     
 }
 else{
     
-    $alerte = "<h2 class='text-center text-info'>Y a un bug !</h2>";
+    $alerte = "<h2 class='text-center text-info'>Même pas en rêve !</h2>";
 }
 
 ?>
@@ -52,13 +55,13 @@ else{
     <header>
         <h1 class="h1 text-center mt-5 pt-5">Suppression du compte</h1>
     </header>
-    <section class="alert alert-danger mt-5 text-center">
+    <section class="alert alert-secondary mt-5 text-center">
 
         <?php 
         if(!isset($alerte)){
         ?>
         <p class="h3">Bonjour <?=$_SESSION['nom']?>.<p>
-        <p class="h3"> Etes-vous vraiment certain de vouloir supprimer ce compte ?</p>
+        <p class="h3 text-danger"> Etes-vous vraiment certain de vouloir supprimer le compte de <?php echo (isset($alerte))? $alerte: $comptes['pseudo'] ?> ?</p>
         <hr class="mt-3">
         <a class="btn btn-danger inline pull-left mt-5" href="?p=Supprimer un compte&id=<?=$id?>&ok" role="button">Supprimer définitivement !</a>
         <a class="btn btn-primary inline pull-right mt-5" href="?p=Comptes" role="button">Ne pas supprimer</a>
@@ -66,10 +69,10 @@ else{
         }
         else{
         ?>
-            <h3>Retour à la liste des <a href="?p=Comptes">Comptes</a></h3>;
+            <h3>Retour à l'<a href="?p=Accueil admin">accueil de l'admin du site</a></h3>;
         <?php
         } 
-        if(isset($alerte)) echo $alerte;
+        if(isset($confirm)) echo $confirm;
     
         ?>
     </section>

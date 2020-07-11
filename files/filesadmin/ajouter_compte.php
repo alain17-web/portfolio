@@ -3,7 +3,7 @@
 //session_start();
 
 
-if(isset($_POST['submit'])){
+if(isset($_POST['nom'],$_POST['pseudo'],$_POST['email'],$_POST['mdp'],$_POST['mdp2'])){
 
     $nom = htmlspecialchars(strip_tags(trim($_POST['nom'])),ENT_QUOTES);
     $pseudo = htmlspecialchars(strip_tags(trim($_POST['pseudo'])),ENT_QUOTES);
@@ -17,8 +17,8 @@ if(isset($_POST['submit'])){
 
             $mdp_hash = password_hash($mdp,PASSWORD_BCRYPT);
 
-            $db = mysqli_connect("localhost","root","root","portfolio");
-                mysqli_set_charset($db,"utf8");
+            /*$db = mysqli_connect("localhost","root","root","portfolio");
+                mysqli_set_charset($db,"utf8");*/
 
             $reg = "SELECT * FROM inscription WHERE pseudo = '$pseudo'";
             $checkPseudo = mysqli_query($db,$reg);

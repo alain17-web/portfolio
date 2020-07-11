@@ -15,12 +15,12 @@ if(isset($_POST['submit'])){
 
         
 
-        $db = mysqli_connect("localhost","root","root","portfolio");
+        /*$db = mysqli_connect("localhost","root","root","portfolio");
             mysqli_set_charset($db,"utf8");
 
         if(!$db){
                 die("Echec de la connexion: " . mysqli_connect_error());
-            }
+            }*/
 
         $req = "SELECT * FROM inscription WHERE pseudo = '$monpseudo' ";
         $result = mysqli_query($db,$req);

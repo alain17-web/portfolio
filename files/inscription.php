@@ -15,8 +15,8 @@ if(isset($_POST['submit'])){
 
             $mdp_hash = password_hash($mdp,PASSWORD_BCRYPT);
 
-            $db = mysqli_connect("localhost","root","root","portfolio");
-                mysqli_set_charset($db,"utf8");
+            /*$db = mysqli_connect("localhost","root","root","portfolio");
+                mysqli_set_charset($db,"utf8");*/
 
             $reg = "SELECT * FROM inscription WHERE pseudo = '$pseudo'";
             $checkPseudo = mysqli_query($db,$reg);

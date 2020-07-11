@@ -2,10 +2,10 @@
 
 session_start();
 
-//require_once "config.php";
+require_once "config.php";
 
-//$db=mysqli_connect(DB_HOST,DB_LOGIN,DB_PWD,DB_NAME);
-//mysqli_set_charset($db,"utf8");
+$db=mysqli_connect(DB_HOST,DB_LOGIN,DB_PWD,DB_NAME);
+mysqli_set_charset($db,"utf8");
 
 //if(isset($_SESSION['masession'])&&$_SESSION['masession']===session_id()){
 

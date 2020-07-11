@@ -14,8 +14,8 @@ if(isset($_POST['nomSite'],$_POST['theurl'],$_POST['description'],$_POST['catego
     }
     else{
 
-        $db = mysqli_connect("localhost","root","root","portfolio");
-            mysqli_set_charset($db,"utf8");
+        /*$db = mysqli_connect("localhost","root","root","portfolio");
+            mysqli_set_charset($db,"utf8");*/
 
         $sql = "INSERT INTO Links(nomSite,theurl,description,categorie) VALUES ('$nomSite','$theurl','$description','$categorie')";
         $insert = mysqli_query($db,$sql) or die(mysqli_error($db));
