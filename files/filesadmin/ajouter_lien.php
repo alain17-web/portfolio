@@ -2,11 +2,11 @@
 
 //session_start();
 
-if(isset($_POST['nomSite'],$_POST['theurl'],$_POST['description'],$_POST['categorie'])){
+if(isset($_POST['nomSite'],$_POST['theurl'],$_POST['thedescription'],$_POST['categorie'])){
 
     $nomSite = htmlspecialchars(strip_tags(trim($_POST['nomSite'])),ENT_QUOTES);
     $theurl = filter_var($_POST['theurl'],FILTER_VALIDATE_URL);
-    $description = htmlspecialchars(strip_tags(trim($_POST['description']),'<p><a><img><br><strong><b><i><em>'),ENT_QUOTES);
+    $thedescription = htmlspecialchars(strip_tags(trim($_POST['thedescription']),'<p><a><img><br><strong><b><i><em>'),ENT_QUOTES);
     $categorie = htmlspecialchars(strip_tags(trim($_POST['categorie'])),ENT_QUOTES);
 
     if(empty($nomSite)||empty($categorie)||$theurl === false){
@@ -17,7 +17,7 @@ if(isset($_POST['nomSite'],$_POST['theurl'],$_POST['description'],$_POST['catego
         /*$db = mysqli_connect("localhost","root","root","portfolio");
             mysqli_set_charset($db,"utf8");*/
 
-        $sql = "INSERT INTO Links(nomSite,theurl,description,categorie) VALUES ('$nomSite','$theurl','$description','$categorie')";
+        $sql = "INSERT INTO Links(nomSite,theurl,thedescription,categorie) VALUES ('$nomSite','$theurl','$thedescription','$categorie')";
         $insert = mysqli_query($db,$sql) or die(mysqli_error($db));
 
         $alerte = "<div class='alert alert-success text-center mt-5'>
@@ -56,17 +56,17 @@ if(isset($_POST['nomSite'],$_POST['theurl'],$_POST['description'],$_POST['catego
             <input type="text" name="theurl" id="theurl" class="form-control" required/>
         </div>
         <div class="form-group">
-            <label for="description"><strong>Description :</strong></label>
-            <input type="text" name="description" id="description" class="form-control" placeholder="facultatif"/>
+            <label for="thedescription"><strong>Description :</strong></label>
+            <input type="text" name="thedescription" id="thedescription" class="form-control" placeholder="facultatif"/>
         </div>
         <div class="form-group">
             <label for="categorie"><strong>Catégorie :</strong></label>
             <input type="text" name="categorie" id="categorie" class="form-control" required/>
         </div>
         <div class="pt-3">
-                <button type="button" class="btn btn-danger mr-auto "><a href="?p=Liste liens" class="text-white">Annuler</a></button>
-                <button type="submit" name="submit" class="btn btn-lg btn-primary inline pull-right">Ajouter ce lien</button>
-            </div>  
+            <button type="button" class="btn btn-danger mr-auto "><a href="?p=Liste liens" class="text-white">Annuler</a></button>
+            <button type="submit" name="submit" class="btn btn-lg btn-primary inline pull-right">Ajouter ce lien</button>
+        </div>  
     </form>
 <?php 
 if(isset($alerte)) echo $alerte;

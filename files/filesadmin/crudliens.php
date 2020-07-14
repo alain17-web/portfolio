@@ -57,10 +57,10 @@
                     <tbody>
                         <tr>
                             <td><?=$item['nomSite']?></td>
-                            <td><a href="<?=$item['theurl']?>" name="<?=$item['theurl']?>" target="_blank"><?=$item['theurl']?></td>
-                            <td><?=$item['description']?></td>
+                            <td><a href="<?=$item['theurl']?>" title="<?=$item['nomSite']?>" target="_blank"><?=$item['theurl']?></td>
+                            <td><?php echo html_entity_decode($item['thedescription'],ENT_QUOTES);?></td>
                             <td><?=$item['categorie']?></td>
-                            <td><a href="?p=Modifer un lien&id=<?= $item['idLiens']?>" class="btn btn-sm btn-warning"><i class="fa fa-edit" aria-hidden="true"></i>Modifier</a></td>
+                            <td><a href="?p=Modifier un lien&id=<?= $item['idLiens']?>" class="btn btn-sm btn-warning"><i class="fa fa-edit" aria-hidden="true"></i>Modifier</a></td>
                             <td><a href="?p=Supprimer un lien&id=<?= $item['idLiens']?>" class="btn btn-sm btn-danger"><i class="fa fa-trash" aria-hidden="true"></i>Supprimer</a></td> 
                         </tr>
                     </tbody>
