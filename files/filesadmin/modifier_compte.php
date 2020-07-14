@@ -1,34 +1,33 @@
 <?php
 
-if(isset($_POST['id'],$_POST['nom'],$_POST['pseudo'],$_POST['email'],$_POST['mdp'],$_POST['mdp2'])){
+if(isset($_POST['id'],$_POST['nom'],$_POST['pseudo'],$_POST['email'])){
 
     $id =(int) $_POST['id'];
     $nom = htmlspecialchars(strip_tags(trim($_POST['nom'])),ENT_QUOTES);
     $pseudo = htmlspecialchars(strip_tags(trim($_POST['pseudo'])),ENT_QUOTES);
     $email = filter_var(trim($_POST['email']), FILTER_VALIDATE_EMAIL);
-    $mdp = htmlspecialchars(strip_tags(trim($_POST['mdp'])),ENT_QUOTES);
-    $mdp2 = htmlspecialchars(strip_tags(trim($_POST['mdp2'])),ENT_QUOTES);
+    /*$mdp = htmlspecialchars(strip_tags(trim($_POST['mdp'])),ENT_QUOTES);
+    $mdp2 = htmlspecialchars(strip_tags(trim($_POST['mdp2'])),ENT_QUOTES);*/
     
-    if(empty($id) || empty($nom)|| empty($pseudo) || empty($email) || empty($mdp) || empty($mdp2)){
+    if(empty($id) || empty($nom)|| empty($pseudo) || empty($email)){
 
         $alerte = "<h2 class='text-center text-danger'>Veuillez saisir tous les champs</h2>";
+        var_dump($email);
 
     }
     else{
 
-        if($mdp == $mdp2){
+        /*if($mdp == $mdp2){
 
-            $mdp_hash = password_hash($mdp,PASSWORD_BCRYPT);
+            $mdp_hash = password_hash($mdp,PASSWORD_BCRYPT);*/
 
-            /*$db = mysqli_connect("localhost","root","root","portfolio");
-            mysqli_set_charset($db,"utf8");*/
-
+            
             $reg = "SELECT * FROM inscription WHERE pseudo  = '$pseudo'";
             $checkPseudo = mysqli_query($db,$reg) or die(mysqli_error($db));
             
             if(empty(mysqli_num_rows($checkPseudo))){
 
-            $sql = "UPDATE inscription SET nom='$nom', pseudo='$pseudo', email='$email', mdp='$mdp_hash' WHERE id=$id";
+            $sql = "UPDATE inscription SET nom='$nom', pseudo='$pseudo' WHERE id=$id";
             $update = mysqli_query($db,$sql) or die(mysqli_error($db));
 
                 if($update){
@@ -45,20 +44,17 @@ if(isset($_POST['id'],$_POST['nom'],$_POST['pseudo'],$_POST['email'],$_POST['mdp
                 $alerte = "<h2 class='text-center text-danger'>Ce pseudo existe déjà</h2>";
             }
 
-        }
+        /*}
         else{
             $alerte = "<h2 class='text-center text-danger'>Les deux mots de passe doivent être identiques</h2>";
-        }
+        }*/
     }
 }
 if(isset($_GET['id'])&&ctype_digit($_GET['id'])){
 
     $id = (int) $_GET['id'];
 
-    /*$db = mysqli_connect("localhost","root","root","portfolio");
-            mysqli_set_charset($db,"utf8");*/
-
-    $sql = "SELECT nom,pseudo,email,mdp FROM inscription WHERE id = $id";
+    $sql = "SELECT id,nom,pseudo,email FROM inscription WHERE id = $id";
     $result = mysqli_query($db,$sql) or die(mysqli_error($db));
 
     if(mysqli_num_rows($result)){
@@ -107,31 +103,31 @@ if(isset($_GET['id'])&&ctype_digit($_GET['id'])){
 
     ?>
 
-    <form action="" method="post">
+    <form action="" method="post" class="mt-5 pt-5">
             <div class="form-group">
                 <label for="nom"><strong>Modifier le nom :</strong></label>
-                <input type="text" name="nom" id="nom" class="form-control" required value="<?=$comptes['nom']?>"/>
+                <input type="text" name="nom" class="form-control" placeholder="Modifier le nom" required value="<?=$comptes['nom']?>"/>
             </div>
             <div class="form-group">
-                <label for="pseudo"><strong>Ajouter un pseudo :</strong></label>
-                <input type="text" name="pseudo" id="pseudo" class="form-control" required value="<?=$comptes['pseudo']?>"/>
+                <label for="pseudo"><strong>Modifier le pseudo :</strong></label>
+                <input type="text" name="pseudo" class="form-control" placeholder="Modifier le pseudo" required value="<?=$comptes['pseudo']?>"/>
             </div>
             <div class="form-group">
-                <label for="email"><strong>Ajouter un email :</strong></label>
-                <input type="email" name="email" id="email" class="form-control" required value="<?=$comptes['email']?>"/>
+                <label for="email"><strong>Modifier l'email :</strong></label>
+                <input type="email" name="email"  class="form-control" placeholder="Modifier l'email" required value="<?=$comptes['email']?>"/>
+            </div>
+            <!--<div class="form-group">
+                <label for="mdp"><strong>Choisir un nouveau mot de passe :</strong></label>
+                <input type="password" name="mdp" id="mdp" class="form-control" required />
             </div>
             <div class="form-group">
-                <label for="mdp"><strong>Ajouter un mot de passe :</strong></label>
-                <input type="password" name="mdp" id="mdp" class="form-control" required value="<?=$comptes['mdp_hash']?>"/>
-            </div>
-            <div class="form-group">
-                <label for="mdp2"><strong>Confirmer le mot de passe :</strong></label>
-                <input type="password" name="mdp2" id="mdp2" class="form-control" required value="<?=$comptes['mdp2']?>"/>
-            </div>
-            <input type="hidden" name="idliens" value="<?=$comptes['id']?>"/>
+                <label for="mdp2"><strong>Confirmer le nouveau mot de passe :</strong></label>
+                <input type="password" name="mdp2" id="mdp2" class="form-control" required />
+            </div>--> 
+            <input type="hidden" name="id" value="<?=$comptes['id']?>"/>
             <div class="pt-3">
                 <button type="button" class="btn btn-danger mr-auto "><a href="?p=Comptes" class="text-white">Annuler</a></button>
-                <button type="submit" name="submit" class="btn btn-lg btn-primary inline pull-right">Modifier</button>
+                <button type="submit" name="submit" class="btn  btn-primary inline pull-right">Modifier</button>
             </div>  
     
     </form>

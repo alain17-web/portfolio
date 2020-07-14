@@ -1,6 +1,6 @@
 <?php 
 
-//session_start();
+
 
 ?>
 <!DOCTYPE html>
@@ -10,17 +10,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel= "stylesheet" href= "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity= "sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin= "anonymous" >
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <!--<link rel="stylesheet" type="text/css" href="../css/portfolio.css">-->
     <title>CRUD galerie</title>
 </head>
 <body>
 <?php require 'contentadmin/headeradmin.php';?>
-<!--<main class="container mt-5 pt-5" id="crudgalerie">
 
-    <h1 class="text-center">Administration de la galerie</h1>
-        
-
-        -->
 <main class="container">
 
     <h1 class="font-weight-light text-center mt-5 pt-5 mb-0">Administration de la galerie</h1>
