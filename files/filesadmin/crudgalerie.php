@@ -90,6 +90,7 @@
 
     <section id="upload" class="mt-5">
         <h3>Uploader une nouvelle image</h3>
+        <h1 class="d-3 text-warning">EN CONSTRUCTION !</h1>
         <form action="" method="post" class="text-center mt-5 pt-5" enctype="multipart/form-data">
             <div class="form-group">
                 <input type="text" name="filename" placeholder="File name...">

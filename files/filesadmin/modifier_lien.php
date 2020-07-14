@@ -30,7 +30,7 @@ if(isset($_POST['idLiens'],$_POST['nomSite'],$_POST['theurl'],$_POST['thedescrip
             }
             else{
                 
-                $alerte ="<h2 class='text-center text-danger'>Ce lien n'existe pas</h2>";
+                $alerte ="<h2 class='text-center text-danger'>Le lien n'a pas été modifié.</h2>";
             }
         }
 
@@ -88,7 +88,7 @@ else{
         </div>
         <div class="form-group form-row">
             <label for="theurl" class="col-3"><strong>Modifier l'URL  :</strong></label>
-            <input type="text" name="theurl" id="theurl" class="form-control col-9" placeholder="Modifier l'URL" required value="<?=$liens['theurl']?>"/>
+            <input type="text" name="theurl" class="form-control col-9" placeholder="Modifier l'URL" required value="<?=$liens['theurl']?>"/>
         </div>
         <div class="form-group form-row">
             <label for="categorie" class="col-3"><strong>Modifier la catégorie :</strong></label>
@@ -99,7 +99,7 @@ else{
             <textarea  name="thedescription"  class="form-control col-9" placeholder="Modifier la description"><?=$liens['thedescription']?></textarea>
         </div>
         <div class="pt-3">
-            <input type="hidden" name="idliens" value="<?=$liens['idLiens']?>"/>
+            <input type="hidden" name="idLiens" value="<?=$liens['idLiens']?>"/>
             <button type="button" class="btn btn-danger mr-auto "><a href="?p=Liste liens" class="text-white">Annuler</a></button>
             <button type="submit" name="submit" class="btn btn-primary inline pull-right">Modifier</button>
         </div>  
