@@ -6,8 +6,7 @@ if(isset($_GET['id'])&&ctype_digit($_GET['id'])){
     
     if(isset($_GET['ok'])){
 
-    /*$db = mysqli_connect("localhost","root","root","portfolio");
-    mysqli_set_charset($db,"utf8");*/
+    
         
     $sql = "DELETE FROM Links WHERE idLiens = $id";
     mysqli_query($db,$sql) or die("Erreur: ".mysqli_errno($db));
@@ -19,8 +18,7 @@ if(isset($_GET['id'])&&ctype_digit($_GET['id'])){
 
     }
 
-    /*$db = mysqli_connect("localhost","root","root","portfolio");
-    mysqli_set_charset($db,"utf8");*/
+    
 
     $sql = "SELECT nomSite,theurl FROM Links WHERE idLiens = $id";
     $result = mysqli_query($db,$sql) or die("Erreur: ".mysqli_errno($db));

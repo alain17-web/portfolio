@@ -1,5 +1,5 @@
 <?php 
-    //session_start();
+    
 
 ?>
 
@@ -20,7 +20,7 @@
     <h1 class="text-center">Administration des liens</h1>
 
         <header class="row mt-5">
-            <p class="h3">Bonjour <?=$_SESSION['nom']?></p>
+            <p class="h3">Bonjour <?=$_SESSION['nom']?></p><br>
             <p class="lead col-md-8">Cette page sert à gérer les liens utiles que j'ai répertorié dans l'apprentissage du code.</p>
             <p class="offset-1 col-md-3"><a href="?p=Ajouter un lien" class="btn btn-primary"><i class="fa fa-plus" aria-hidden="true"></i>&nbsp;&nbsp;Ajouter un nouveau lien</a></p>
         </header>
@@ -39,8 +39,7 @@
                     </thead>
                 <?php
 
-                /*$db = mysqli_connect("localhost","root","root","portfolio");
-                mysqli_set_charset($db,"utf8");*/
+                
                 $sql = "SELECT * FROM Links";
 
                 $reponse = mysqli_query($db,$sql) or die("Erreur: ".mysqli_errno($db));
