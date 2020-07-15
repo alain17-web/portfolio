@@ -1,6 +1,8 @@
 <?php 
-    
-
+if(!isset($_SESSION['masession'])||$_SESSION['masession']!==session_id()){
+header("Location:?p=Déconnexion");
+exit();
+}
 ?>
 
 <!DOCTYPE html>

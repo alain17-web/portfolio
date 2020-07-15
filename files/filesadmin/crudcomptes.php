@@ -1,6 +1,8 @@
 <?php 
-    //session_start();
-
+if(!isset($_SESSION['masession'])||$_SESSION['masession']!==session_id()){
+header("Location:?p=Déconnexion");
+exit();
+}
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -42,8 +44,7 @@
                     </thead>
                 <?php
 
-                /*$db = mysqli_connect("localhost","root","root","portfolio");
-                mysqli_set_charset($db,"utf8");*/
+                
 
                 $sql = "SELECT * FROM inscription";
 
@@ -66,8 +67,7 @@
                             <td><?=$item['mdp']?></td>
                             <td><?=$item['dateInscription']?></td>
                             <td><a href="?p=Modifier un compte&id=<?=$item['id']?>" class="btn btn-sm btn-warning"><i class="fa fa-edit" aria-hidden="true"></i>Modifier</a></td>
-                            <!--<td><a href="?p=Supprimer un compte" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#supprimerCompte"><i class="fa fa-trash" aria-hidden="true"></i>Supprimer</a></td>--> 
-                            <td><a href="?p=Supprimer un compte&id=<?= $item['id']?>" class="btn btn-sm btn-danger"><i class="fa fa-trash" aria-hidden="true"></i>Supprimer</a></td>
+                             <td><a href="?p=Supprimer un compte&id=<?= $item['id']?>" class="btn btn-sm btn-danger"><i class="fa fa-trash" aria-hidden="true"></i>Supprimer</a></td>
                             
                         </tr>
                     </tbody>

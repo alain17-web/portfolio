@@ -1,6 +1,9 @@
-<?php
+<?php 
+if(!isset($_SESSION['masession'])||$_SESSION['masession']!==session_id()){
+header("Location:?p=Déconnexion");
+exit();
+}
 
-//session_start();
 
 
 if(isset($_POST['nom'],$_POST['pseudo'],$_POST['email'],$_POST['mdp'],$_POST['mdp2'])){
@@ -17,8 +20,7 @@ if(isset($_POST['nom'],$_POST['pseudo'],$_POST['email'],$_POST['mdp'],$_POST['md
 
             $mdp_hash = password_hash($mdp,PASSWORD_BCRYPT);
 
-            /*$db = mysqli_connect("localhost","root","root","portfolio");
-                mysqli_set_charset($db,"utf8");*/
+            
 
             $reg = "SELECT * FROM inscription WHERE pseudo = '$pseudo'";
             $checkPseudo = mysqli_query($db,$reg);

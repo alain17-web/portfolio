@@ -1,3 +1,10 @@
+<?php 
+if(!isset($_SESSION['masession'])||$_SESSION['masession']!==session_id()){
+header("Location:?p=Déconnexion");
+exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -29,8 +36,7 @@
                     </thead>
                 <?php
 
-                /*$db = mysqli_connect("localhost","root","root","portfolio");
-                mysqli_set_charset($db,"utf8");*/
+                
 
                 $sql = "SELECT * FROM contact";
 

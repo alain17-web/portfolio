@@ -1,4 +1,9 @@
 <?php 
+if(!isset($_SESSION['masession'])||$_SESSION['masession']!==session_id()){
+header("Location:?p=Déconnexion");
+exit();
+}
+
 
 if(isset($_GET['id'])&&ctype_digit($_GET['id'])){
 
@@ -6,8 +11,7 @@ if(isset($_GET['id'])&&ctype_digit($_GET['id'])){
     
     if(isset($_GET['ok'])){
 
-    /*$db = mysqli_connect("localhost","root","root","portfolio");
-    mysqli_set_charset($db,"utf8");*/
+    
         
     $sql = "DELETE FROM  inscription WHERE id = $id";
     mysqli_query($db,$sql) or die("Erreur: ".mysqli_errno($db));
@@ -19,8 +23,7 @@ if(isset($_GET['id'])&&ctype_digit($_GET['id'])){
 
     }
 
-    /*$db = mysqli_connect("localhost","root","root","portfolio");
-    mysqli_set_charset($db,"utf8");*/
+    
 
     $sql = "SELECT pseudo FROM inscription WHERE id = $id";
     $result = mysqli_query($db,$sql) or die("Erreur: ".mysqli_errno($db));

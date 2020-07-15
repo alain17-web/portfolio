@@ -1,4 +1,9 @@
-<?php
+<?php 
+if(!isset($_SESSION['masession'])||$_SESSION['masession']!==session_id()){
+header("Location:?p=Déconnexion");
+exit();
+}
+
 
 if(isset($_POST['id'],$_POST['nom'],$_POST['pseudo'],$_POST['email'])){
 
