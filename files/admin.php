@@ -1,26 +1,20 @@
 <?php 
 
 
-//session_start();
+
 
 $page='admin.php';
 
-if(isset($_POST['submit'])){
+if(isset($_POST['monpseudo'],$_POST['monmdp'])){
 
     $monpseudo = htmlspecialchars(strip_tags(trim($_POST['monpseudo'])),ENT_QUOTES);
     $monmdp = htmlspecialchars(strip_tags(trim($_POST['monmdp'])),ENT_QUOTES);
      
 
-    if($monpseudo && $monmdp){
+    if(!empty($monpseudo) && !empty($monmdp)){
 
         
 
-        /*$db = mysqli_connect("localhost","root","root","portfolio");
-            mysqli_set_charset($db,"utf8");
-
-        if(!$db){
-                die("Echec de la connexion: " . mysqli_connect_error());
-            }*/
 
         $req = "SELECT * FROM inscription WHERE pseudo = '$monpseudo' ";
         $result = mysqli_query($db,$req);
@@ -36,8 +30,10 @@ if(isset($_POST['submit'])){
 
                 if(password_verify($monmdp,$mdp_hash) && ($userpseudo == $monpseudo)){
 
-                    
+                    $_SESSION['masession'] = session_id();
+                    var_dump($_SESSION['masession']);
                     $_SESSION['nom'] = $username;
+                    //$_SESSION['nom'] = session_id();
                     header("Location:?p=Accueil admin");
                     exit();
                 }

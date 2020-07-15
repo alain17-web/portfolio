@@ -9,7 +9,7 @@ mysqli_set_charset($db,"utf8");
 
 //if(isset($_SESSION['masession'])&&$_SESSION['masession']===session_id()){
 
-    if(!isset($_GET["p"])){
+    /*if(!isset($_GET["p"])){
         require "files/homepage.php";
     }
     else{
@@ -89,4 +89,97 @@ mysqli_set_charset($db,"utf8");
             require "files/homepage.php";
 
         }
+    }*/
+
+    if(isset($_GET['p'])){
+
+        switch($_GET['p']){
+            case "Déconnexion":
+                require "files/filesadmin/disconnect.php";
+                //header("Location: ../portfolio/files/filesadmin/disconnect.php");
+                break;
+            case "Accueil admin":
+                require "files/filesadmin/accueiladmin.php";
+                break;
+            case "Ajouter une image":
+                require "files/filesadmin/crudgalerie.php";
+                break;
+            case "Afficher une image":
+                require "files/filesadmin/crudgalerie.php";
+                break;
+            case "Modifier une image":
+                require "files/filesadmin/crudgalerie.php";
+                break;
+            case "Supprimer une image":
+                require "files/filesadmin/crudgalerie.php";
+                break;
+             case "Liste liens":
+                require "files/filesadmin/crudliens.php";
+                break;
+            case "Ajouter un lien":
+                require "files/filesadmin/ajouter_lien.php";
+                break; 
+            case "Modifier un lien":
+                require "files/filesadmin/modifier_lien.php";
+                break;
+            case "Supprimer un lien":
+                require "files/filesadmin/supprimer_lien.php";
+                break;
+            case "Liste contacts":
+                require "files/filesadmin/crudcontact.php";
+                break;
+             case "Comptes":
+                require "files/filesadmin/crudcomptes.php";
+                break;
+            case "Ajouter un compte":
+                require "files/filesadmin/ajouter_compte.php";
+                break;
+            case "Modifier un compte":
+                require "files/filesadmin/modifier_compte.php";
+                break;
+            case "Supprimer un compte":
+                require "files/filesadmin/supprimer_compte.php";
+                break;
+            default:
+                require "files/filesadmin/error404.php";
+        }
     }
+
+//}
+else{
+
+    if(!isset($_GET['p'])){
+        require "files/homepage.php";
+                
+            }
+            else{
+        switch($_GET['p']){
+            
+                
+            case "Galerie":
+                require "files/gallery.php";
+                break;
+            case "tuto1":
+                require "files/tuto1.php";
+                break;
+            case "tuto2":
+                require "files/tuto2.php";
+                break;
+            case "Liens":
+                require "files/links.php";
+                break;
+            case "Contact":
+                require "files/contact.php";
+                break;
+            case "Admin":
+                require "files/admin.php";
+                break;
+            case "Inscription":
+                require "files/inscription.php";
+                break;
+            default:
+                require "files/homepage.php";
+    
+        }
+    }
+}

@@ -6,8 +6,7 @@ if(isset($_POST['id'],$_POST['nom'],$_POST['pseudo'],$_POST['email'])){
     $nom = htmlspecialchars(strip_tags(trim($_POST['nom'])),ENT_QUOTES);
     $pseudo = htmlspecialchars(strip_tags(trim($_POST['pseudo'])),ENT_QUOTES);
     $email = filter_var(trim($_POST['email']), FILTER_VALIDATE_EMAIL);
-    /*$mdp = htmlspecialchars(strip_tags(trim($_POST['mdp'])),ENT_QUOTES);
-    $mdp2 = htmlspecialchars(strip_tags(trim($_POST['mdp2'])),ENT_QUOTES);*/
+    
     
     if(empty($id) || empty($nom)|| empty($pseudo) || empty($email)){
 
@@ -17,9 +16,7 @@ if(isset($_POST['id'],$_POST['nom'],$_POST['pseudo'],$_POST['email'])){
     }
     else{
 
-        /*if($mdp == $mdp2){
-
-            $mdp_hash = password_hash($mdp,PASSWORD_BCRYPT);*/
+        
 
             
             $reg = "SELECT * FROM inscription WHERE pseudo  = '$pseudo'";
@@ -44,10 +41,7 @@ if(isset($_POST['id'],$_POST['nom'],$_POST['pseudo'],$_POST['email'])){
                 $alerte = "<h2 class='text-center text-danger'>Ce pseudo existe déjà</h2>";
             }
 
-        /*}
-        else{
-            $alerte = "<h2 class='text-center text-danger'>Les deux mots de passe doivent être identiques</h2>";
-        }*/
+        
     }
 }
 if(isset($_GET['id'])&&ctype_digit($_GET['id'])){
@@ -116,14 +110,7 @@ if(isset($_GET['id'])&&ctype_digit($_GET['id'])){
                 <label for="email"><strong>Modifier l'email :</strong></label>
                 <input type="email" name="email"  class="form-control" placeholder="Modifier l'email" required value="<?=$comptes['email']?>"/>
             </div>
-            <!--<div class="form-group">
-                <label for="mdp"><strong>Choisir un nouveau mot de passe :</strong></label>
-                <input type="password" name="mdp" id="mdp" class="form-control" required />
-            </div>
-            <div class="form-group">
-                <label for="mdp2"><strong>Confirmer le nouveau mot de passe :</strong></label>
-                <input type="password" name="mdp2" id="mdp2" class="form-control" required />
-            </div>--> 
+            
             <input type="hidden" name="id" value="<?=$comptes['id']?>"/>
             <div class="pt-3">
                 <button type="button" class="btn btn-danger mr-auto "><a href="?p=Comptes" class="text-white">Annuler</a></button>
