@@ -1,9 +1,8 @@
 <?php 
 
-
-
-
 $page='admin.php';
+
+
 
 if(isset($_POST['monpseudo'],$_POST['monmdp'])){
 
@@ -23,7 +22,7 @@ if(isset($_POST['monpseudo'],$_POST['monmdp'])){
         if(mysqli_num_rows($result) === 1 ){
 
                 $row = mysqli_fetch_assoc($result);
-                //$_SESSION['masession'] = session_id();
+                
                 $mdp_hash = $row['mdp'];
                 $userpseudo = $row['pseudo'];
                 $username = $row['nom'];
@@ -31,9 +30,8 @@ if(isset($_POST['monpseudo'],$_POST['monmdp'])){
                 if(password_verify($monmdp,$mdp_hash) && ($userpseudo == $monpseudo)){
 
                     $_SESSION['masession'] = session_id();
-                    var_dump($_SESSION['masession']);
                     $_SESSION['nom'] = $username;
-                    //$_SESSION['nom'] = session_id();
+                    
                     header("Location:?p=Accueil admin");
                     exit();
                 }

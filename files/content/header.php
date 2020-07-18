@@ -23,9 +23,7 @@
                 <li class="nav-item
                 <?php if($page=='contact.php'){echo 'active';}?>"><a class="nav-link px-5" href="?p=Contact">Contact</a>
                 </li>
-                <!--<li class="nav-item
-                <?php //if($page=='admin.php'){echo 'active';}?>"><a class="nav-link px-5" href="?p=Admin">Admin</a>
-                </li>-->
+                
              </ul>
              <a href="?p=Admin"><button class="btn btn-outline-info my-2 my-sm-0" type="button">Se connecter à l'Admin</button></a>
         </div>
